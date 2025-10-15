@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+    {
+      "label": "Build OpenGL Project",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "main.cpp",
+        "src/glad.c", // nếu bạn dùng GLAD
+        "-Iinclude",  // đường dẫn đến thư mục chứa header
+        "-Llib",      // đường dẫn đến thư mục chứa file .lib hoặc .a
+        "-lglfw3",
+        "-lopengl32",
+        "-lgdi32",
+        "-o",
+        "main.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
