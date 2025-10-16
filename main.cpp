@@ -205,6 +205,8 @@ int main() {
     }
 
     // Dọn dẹp và thoát
+    glDeleteProgram(shaderProgram);
+    glfwDestroyWindow(window);
     glfwTerminate();
     return 0;
 }
